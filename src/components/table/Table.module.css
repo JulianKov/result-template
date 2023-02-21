@@ -1,0 +1,46 @@
+.table {
+    border: none;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+.orangeHeader {
+    color: var(--orange);
+    border-bottom: 2px solid var(--orange);
+}
+
+.cyanHeader {
+    color: var(--cyan);
+    border-bottom: 2px solid var(--cyan);
+}
+
+.headerCell {
+    padding: 10px 0;
+}
+
+.cell {
+    height: 24px;
+    padding: 6px 0 2px;
+    vertical-align: center;
+    font-weight: 600;
+}
+
+.scoreCell {
+    height: 24px;
+    display: flex;
+    align-items: center;
+    gap: calc(var(--spacing) * 2);
+    padding: 6px 0 2px;
+    width: 80px;
+}
+
+.row {
+    color: var(--white);
+    padding: 10px 0;
+}
+
+.dead {
+    color: #afafaf;
+}
+

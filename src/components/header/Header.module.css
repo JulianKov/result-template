@@ -1,0 +1,16 @@
+.title {
+    margin-bottom: calc(var(--spacing) * 4);
+    margin-top: 0;
+
+    font-size: 3rem;
+    text-align: center;
+    color: var(--white);
+}
+
+.orange {
+    color: var(--orange);
+}
+
+.cyan {
+    color: var(--cyan);
+}
