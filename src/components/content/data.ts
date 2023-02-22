@@ -1,4 +1,4 @@
-import {GameData, Teams} from "../../types";
+import { GameData, Teams } from "../../types";
 
 const names = [
   "Aspect",
@@ -61,7 +61,7 @@ const names = [
   "Wraith",
   "Knuckles",
   "Zero",
-  'Steel',
+  "Steel",
   "Kevlar",
   "Lightning",
   "Tito",
@@ -72,7 +72,7 @@ const names = [
   "Ironsides",
   "Iron-Cut",
   "Tempest",
-  'Iron Heart',
+  "Iron Heart",
   "Steel Forge",
   "Pursuit",
   "Steel Foil",
@@ -85,16 +85,16 @@ const names = [
   "Dissent",
   "Subversion",
   "Rebellion",
-  'Insurgent',
+  "Insurgent",
   "Accidental Genius",
-  'Acid Gosling',
+  "Acid Gosling",
   "Admiral Tot",
   "AgentHercules",
   "Airport Hobo",
   "Alley Frog",
   "Alpha",
-  'AlphaReturns',
-  'Angel',
+  "AlphaReturns",
+  "Angel",
   "AngelsCreed",
   "Arsenic Coo",
   "Atomic Blastoid",
@@ -109,32 +109,37 @@ export const gameData: GameData = {
   winner: winner,
   orange: {
     name: Teams.Orange,
-    players: Array.from({length: 40}, (element, index) => {
-      const score = Math.floor(Math.random() * (winner === Teams.Orange ? 200 : 100));
-  
+    players: Array.from({ length: 40 }, (element, index) => {
+      const score = Math.floor(
+        Math.random() * (winner === Teams.Orange ? 200 : 100)
+      );
+
       return {
         id: index,
-          name: names.splice(Math.floor(Math.random() * names.length), 1)?.[0],
+        name: names.splice(Math.floor(Math.random() * names.length), 1)?.[0],
         score,
-        dead: winner === Teams.Orange ? Math.random() < 0.5 : Math.random() < 0.8,
-        kills: Math.floor(score * (winner === Teams.Orange ? 2 : 1) / 10),
-        deaths: Math.floor(score * (winner === Teams.Orange ? 1 : 2) / 10),
-      }
-    }).sort((a, b) => b.score - a.score)
+        dead:
+          winner === Teams.Orange ? Math.random() < 0.5 : Math.random() < 0.8,
+        kills: Math.floor((score * (winner === Teams.Orange ? 2 : 1)) / 10),
+        deaths: Math.floor((score * (winner === Teams.Orange ? 1 : 2)) / 10),
+      };
+    }).sort((a, b) => b.score - a.score),
   },
   cyan: {
     name: Teams.Cyan,
-    players: Array.from({length: 40}, (element, index) => {
-      const score = Math.floor(Math.random() * (winner === Teams.Cyan ? 200 : 100));
-      
+    players: Array.from({ length: 40 }, (element, index) => {
+      const score = Math.floor(
+        Math.random() * (winner === Teams.Cyan ? 200 : 100)
+      );
+
       return {
         id: index + 40,
         name: names.splice(Math.floor(Math.random() * names.length), 1)?.[0],
         score,
         dead: winner === Teams.Cyan ? Math.random() < 0.5 : Math.random() < 0.8,
-        kills: Math.floor(score * (winner === Teams.Cyan ? 2 : 1) / 10),
-        deaths: Math.floor(score * (winner === Teams.Cyan ? 1 : 2) / 10),
-      }
-    }).sort((a, b) => b.score - a.score)
+        kills: Math.floor((score * (winner === Teams.Cyan ? 2 : 1)) / 10),
+        deaths: Math.floor((score * (winner === Teams.Cyan ? 1 : 2)) / 10),
+      };
+    }).sort((a, b) => b.score - a.score),
   },
-}
+};

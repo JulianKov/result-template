@@ -1,7 +1,11 @@
 :root {
     --white: #FFFFFF;
+    --black: #000000;
     --orange: #E78C31;
     --cyan: #19FFEC;
+    --inactive: #AFAFAF;
+    --space: #2D353B;
+    --gray: #535D68;
 
     --spacing: 4px;
 }

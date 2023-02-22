@@ -20,27 +20,29 @@
 }
 
 .cell {
-    height: 24px;
-    padding: 6px 0 2px;
     vertical-align: center;
+    height: 24px;
+    padding: calc(var(--spacing) * 1.5) 0 calc(var(--spacing) / 2);
+
     font-weight: 600;
 }
 
 .scoreCell {
-    height: 24px;
     display: flex;
     align-items: center;
     gap: calc(var(--spacing) * 2);
-    padding: 6px 0 2px;
     width: 80px;
+    height: 24px;
+    padding: calc(var(--spacing) * 1.5) 0 calc(var(--spacing) / 2);
 }
 
 .row {
+    padding: calc(var(--spacing) * 2.5) 0;
+
     color: var(--white);
-    padding: 10px 0;
 }
 
 .dead {
-    color: #afafaf;
+    color: var(--inactive);
 }
 
